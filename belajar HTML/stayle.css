@@ -1,0 +1,268 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+  --text: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--text);
+}
+
+.navbar-nav a {
+  margin-left: 2rem;
+  color: var(--text);
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar-extra a {
+  margin-left: 1rem;
+  color: var(--text);
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 120px; /* supaya tidak tertutup navbar */
+  padding-bottom: 100px;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1585386959984-a4155222f234') no-repeat center;
+  background-size: cover;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background-color: #a06e48;
+}
+/* Section Umum */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+/* Layanan */
+.layanan {
+  padding: 80px 7%;
+  background-color: #111;
+}
+
+.layanan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.layanan-card {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.layanan-card:hover {
+  transform: translateY(-5px);
+  background-color: #222;
+}
+
+.layanan-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.layanan-card p {
+  font-size: 0.95rem;
+}
+
+/* Tentang Kami */
+.tentang {
+  padding: 80px 7%;
+  background-color: #0a0a0a;
+}
+
+.tentang-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tentang-img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.tentang-text {
+  flex: 1 1 400px;
+}
+
+.tentang-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem 5%;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar-nav a {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .navbar-extra {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Layanan */
+  .layanan-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .layanan-card {
+    width: 90%;
+  }
+
+}.kontak-sosial {
+  padding: 60px 7%;
+  background-color:  #0a0a0a;
+  text-align: left;
+  color: var(--text);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.kontak-sosial .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+ 
+}
+
+.social-item i {
+  stroke-width: 2.5;
+  width: 28px;
+  height: 28px;
+}
+
+.social-item:hover {
+  color: #a06e48;
+}
+.footer-simple {
+  background-color: #0a0a0a;
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
